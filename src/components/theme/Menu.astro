@@ -1,0 +1,15 @@
+---
+import { main } from "@lib/menus.json"
+import Link from '../base/LinkBase.astro';
+import ContactIcons from "@components/ContactIcons.astro";
+const menu = main
+
+const { class: className, ...props } = Astro.props;
+
+---
+<ul class:list={["ic", className]} {...props} >
+    { menu.map( ({title, link })=> (
+            <li><Link href={link}>{title}</Link></li> 
+    ))}
+</ul>
+

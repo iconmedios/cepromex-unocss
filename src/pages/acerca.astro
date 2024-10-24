@@ -1,0 +1,75 @@
+---
+import IconoirTools from "@components/icons/IconoirTools.astro";
+import Ui from "@components/Ui.astro";
+import LayoutPage from "@layouts/LayoutPage.astro";
+import {imgK03 } from "../lib/images"
+
+const title = "Quiénes Somos";
+const desc =" Por eso, ofrecemos una gama de productos avanzados, ideales para apoyar sus necesidades en estos aspectos. ";
+const seo = {
+  title: title,
+  description: desc,
+};
+
+const items = [
+    "MALLA CICLONICA",
+    "POSTE DE ARRANQUE",
+    "POSTE DE ESQUINERO",
+    "ALAMBRE DE PUAS",
+    "POSTE DE LINEA",
+    "TAPON SENCILLO",
+    "ABRAZADERA DE TORNILLO",
+    "ABRAZADERA DE SOLERA",
+    "SOLERAS GALVANIZADAS",
+    "TENSOR",
+    "TAPONES PARA PUAS",
+    "ESPADIN",
+    "TORNILLOS GALVANIZADOS",
+    "COLOCACIÓN DE ACCESORIOS PARA PUERTAS ABATIBLES"
+];
+
+
+---
+
+<LayoutPage {seo} titlepage={title} subtitle={desc} imgPage={imgK03} >
+
+<section>
+<div class="container">
+
+    <h2 class="pb-4"> En CEPROMEX, reconocemos la importancia de contar con soluciones de seguridad y servicio de alta calidad.</h2>
+    <p>
+      Por eso, ofrecemos una gama de productos avanzados, ideales para apoyar sus necesidades en estos aspectos.
+    </p>
+    <p>
+      Disponemos de la logística adecuada para el manejo y transporte de su material, 
+      lo que reduce significativamente sus costos de mantenimiento y garantiza una mayor durabilidad.
+    </p>
+    <h5 class="my-4">Somos auxiliares en la ingeniería civil, y nuestros productos destacan por:</h5>
+  <ul class="list-base">
+     <li> Cumplir con las Normas Internacionales de Calidad.</li>
+     <li> Utilizar materia prima y procesos de fabricación de clase mundial.</li>
+     <li> Ofrecer una larga durabilidad y resistencia, con más de 8 años de vida útil.</li>
+     <li> Ser amigables con el medio ambiente, integrándose de forma sostenible al ecosistema.</li>
+  </ul>
+
+  <h5 class="py-4">COLOCACIÓN DE MALLA CON SUS ACCESORIOS</h5>
+  <div class="container">
+    <ul class="servicios grid sm:grid-cols-2 lg:grid-cols-4 gap-2 bg-zinc-3 p-2 my-16 ">
+      {items.map((item) => (
+        <li> <IconoirTools class="text-10 border-2 rounded-full border-brand p-1" /> {item}</li>
+    ))}
+  
+    </ul>
+  </div>
+
+  </div>
+</section>
+
+
+</LayoutPage>
+
+<style>
+  .servicios li{
+    @apply bg-zinc-50 p-1 h-36 flex flex-col icc gap-2 text-center  ; 
+  }
+</style>

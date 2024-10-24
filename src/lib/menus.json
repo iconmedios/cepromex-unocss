@@ -1,0 +1,56 @@
+{
+    "main": [
+        {
+            "title": "Inicio",
+            "link": "/"
+        },
+        {
+            "title": "Acerca de",
+            "link": "/acerca"
+        },
+        {
+            "title": "Servicios",
+            "link": "/servicios"
+        },
+        {
+            "title": "Productos",
+            "link": "/productos"
+        }
+       
+    ],
+    "productos": [
+        {
+          "title": "Malla Ciclonica Galvanizada",
+          "link": "/productos/malla-ciclonica-galvanizada"
+        },
+        {
+          "title": "Tubo Industrial Galvanizado",
+          "link": "/productos/tubo-industrial-galvanizado"
+        },
+        {
+          "title": "Malla Ciclonica PVC",
+          "link": "/productos/malla-ciclonica-pvc"
+        },
+        {
+          "title": "Señalización Vial",
+          "link": "/productos/senalizacion-vial"
+        },
+        {
+          "title": "Cinta Plastificada Decorativa",
+          "link": "/productos/cinta-plastificada"
+        },
+        {
+          "title": "Proteccion de Navajas",
+          "link": "/productos/proteccion-de-navajas"
+        },
+        {
+          "title": "Alambre de Puas",
+          "link": "/productos/alambre-de-puas"
+        },
+        {
+          "title": "Reja de Acero",
+          "link": "/productos/reja-acero"
+        }
+        
+      ]
+}

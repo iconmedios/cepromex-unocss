@@ -1,0 +1,40 @@
+---
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Cinta Plastificada Decorativa"; 
+const desc ="Cinta Plastificada en colores verde, blanco, gris plata y azul rey, como colores de línea, son resistentes a todo tipo de clima ";
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+<section>
+  <div class="container">
+    <p>Nuestros productos de alta calidad, son resistentes a todo tipo de
+      climas, por lo que no es necesario contar con un mantenimiento
+      especial. Todos los cercados están garantizados y fueron sometidos a
+      las más severas pruebas de resistencia y durabilidad.</p>
+    <p>{desc}
+    Brindándole privacidad y decoración a los cercados de malla ciclónica
+      combinado diseño y seguridad de acuerdo a sus necesidades.</p>
+    <p>
+      Se presenta en colores verde, blanco, gris plata y azul rey, como
+      colores de línea; si requiere un color en especial para su propio
+      diseño, nosotros se lo igualamos.
+    </p>
+    <p>
+      Durante el proceso de instalación de nuestros productos contamos con
+      un equipo altamente calificado que supervisa paso a paso nuestros
+      cercados. Tener más resistencia a la intemperie y excelente calidad.
+    </p>
+   
+    <p>Contamos con difrentes tamaños y colores.</p>
+  </div>
+</section>
+
+</LayoutProd>
+<style>
+  p{@apply mb-4; }
+</style>

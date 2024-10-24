@@ -1,0 +1,66 @@
+---
+import ServiciosBlocks from "@components/ServiciosBlocks.astro";
+import LayoutPage from "@layouts/LayoutPage.astro";
+
+const title = "Productos Principales";
+const desc =" Desde la seguridad perimetral con nuestras mallas ciclónicas galvanizadas y alambre de púas, hasta la construcción de estructuras robustas con tubos industriales galvanizados. ";
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutPage {seo} titlepage={title} subtitle={desc} >
+  <section>
+    <div class="container">
+      <p>
+        Ofrecemos una amplia gama de productos de alta calidad diseñados para satisfacer sus necesidades. 
+        Desde la seguridad perimetral con nuestras mallas ciclónicas galvanizadas y alambre de púas, 
+        hasta la construcción de estructuras robustas con tubos industriales galvanizados. Además, 
+        contamos con señalización vial para garantizar la seguridad en cualquier entorno, 
+        y una variedad de opciones decorativas como cintas plastificadas y protecciones de navajas. 
+        Complementamos nuestra oferta con rejas de acero para mayor seguridad y durabilidad. ¡Somos su aliado en proyectos de construcción, seguridad y decoración!"
+      </p>
+      <h3 class="mb-4" > Contamos con el mantenimiento y servicio profesional de malla ciclónica.</h3>
+      <p>
+        <a title="malla ciclonica" href="http://www.grupocepromex.com/productos.html">Malla Ciclónica</a> galvanizada y P.V.C., contamos con diferentes alturas 1 mt. 1.25mt.
+        1.50mt. 2mt 2.50 mt. De 3 a 6 m. Y calibres del 13 al 9 mm. ,  Tubería de acero galvanizado en diferentes medidas, calibres, diámetros
+        con accesorios para su correcta instalación.  Concertina de alta seguridad galvanizada bisturí tipo: industrial,
+        residencial y militar. Cinta Plástica P.V.C. en diferentes colores para seguridad, privacidad y
+        decoración.
+      </p>
+      <p>
+        Producto nuevo en cercados permanentes competitivos con herrería en
+        diferentes colores, blanco, verde, azul, amarillo, café y en diferentes
+        alturas.
+      </p>
+      <p>
+     
+      
+    </div>
+  </section>
+
+  <section class="bg-zinc-2" >
+		<div class="container text-center">
+			<h3 class="pb-16 text-6 text-brand-400" >Nuestros productos</h3>
+			<ServiciosBlocks />
+		</div>
+	</section>
+
+  <section class="bg-zinc-50" >
+    <div class="container text-center">
+       
+      <img class="w-30 mx-auto" src="https://grupocepromex.com/imag_cepromex/deacero_logo.jpg" alt="REJACERO" width="104" height="25"/>
+      <span class="py-4">Somos distribuidores directos</span> 
+      <img class="mx-auto" src="https://grupocepromex.com/imag_cepromex/prodgeneral.jpg" alt=""/>
+   
+    </div>
+  </section>
+
+ 
+</LayoutPage>
+
+
+<style>
+  p{ @apply mb-4 ; }
+</style>

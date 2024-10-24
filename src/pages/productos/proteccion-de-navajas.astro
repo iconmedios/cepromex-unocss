@@ -1,0 +1,43 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import ProNavajas from "@components/tables/ProNavajas.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Protección de Navajas";
+const desc =" Solución integral para su seguridad perimetral. Nuestra protección de navajas de alambre galvanizado Clase II (67000PSI), ofrece una resistencia inigualable ";
+const imgtop = "https://grupocepromex.com/imag_cepromex/proteccion-navajas.jpg"
+const txb = "Somos distribuidores"
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+  <section>
+    <div class="container">
+
+      <p>
+        Protección de navajas de máxima seguridad.  Con 33 espirales y un peso de 4,200 kg, nuestra protección de navajas ofrece una barrera impenetrable. Fabricada con materiales de primera calidad como acero galvanizado ASTM-792 y alambre galvanizado Clase II (67000PSI), garantiza una resistencia excepcional a la corrosión y a los intentos de intrusión.  Ideal para perímetros que requieren la máxima seguridad.
+      </p>
+
+      <span class="block my-4">Características</span>
+
+          <ul class="list-base">
+            <li>Número de espirales: 33</li>
+            <li>Peso aproximado: 4,200 kg</li>
+            <li>Protección de navajas: Galvanizado (ASTM-792)</li>
+            <li>Lámina de acero: Galvanizado</li>
+            <li>Alambre: Galvanizado Clase II (67000PSI)</li>
+          </ul>
+     
+    </div>
+  </section>
+
+<section class="bg-zinc-2">
+  <div class="container">
+    <ProNavajas />
+  </div>
+</section>
+
+<ImageCenter  class="bg-zinc-50" imgurl={imgtop} altitle={title} textbt={txb}  />
+</LayoutProd>

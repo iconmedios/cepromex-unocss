@@ -1,0 +1,35 @@
+---
+import { productos } from "@lib/menus.json"
+
+const menu = productos;
+
+// Lista aleatoria de colores de fondo
+const bgClasses = [
+  "bg-brand-100 text-brand-500",
+  "bg-brand-200 text-brand-600",
+  "bg-brand-300 text-brand-50",
+  "bg-brand-400 text-brand-100",
+  "bg-brand-500 text-brand-50",
+  "bg-brand-600 text-brand-100",
+ 
+];
+// Función para barajar las clases
+const shuffleArray = (array :string[]) => {
+  return array.sort(() => Math.random() - 0.5);
+};
+
+// Barajar la lista de clases
+const shuffledBgClasses = shuffleArray(bgClasses);
+
+const { classServices, ...props } = Astro.props;
+---
+
+<ul class:list={["grid grid-cols-2 lg:grid-cols-4 gap-2 p-2 bg-soft-40 border-2 w-full  ", classServices]} {...props}>
+  {menu.map(({ title, link }, index) => (
+    <li class="flex icc bg-soft-20 w-full md:w-auto">
+      <a class={`flex all300 hover:opacity-90 h-52 icc w-full text-center p-2 ${shuffledBgClasses[index % shuffledBgClasses.length]}`} href={link}>
+        {title}
+      </a>
+    </li>
+  ))}
+</ul>

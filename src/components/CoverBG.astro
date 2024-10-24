@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+export interface Props {
+	opacity?: string;
+	bgimg?:string
+    classCover ?:string;
+    classImage?:string
+    
+}
+const { bgimg, classCover, classImage } = Astro.props as Props;
+---
+
+<div class:list={["z-1 absolute top-0 left-0 w-full h-full ", classCover]}></div>
+<img class:list={["absolute z-0  object-cover object-b top-0 left-0 h-full w-full", classImage]} src={bgimg} alt="Fondo malla ciclonica"  >
+
+

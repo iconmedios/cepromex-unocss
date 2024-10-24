@@ -1,0 +1,48 @@
+---
+
+const campos = {
+    name:   "Nombre",
+    tel:    "Teléfono",
+    email:  "Correo Electrónico",
+    sub:{
+        option:"Seleccionar",
+        a:"Malla ciclonica",
+        b:"Tubo Industrial ",
+        c:"Señalización Vial",
+        d:"Reja de Acero",
+        e:"Otros",
+    },
+    message:"Mensaje"
+
+}
+---
+
+
+<form id="contacto" class="grid gap-4 bg-main-100 p-6" action="send_select.php" method="POST">
+            
+    <input class="contact-form"     type="text"    name={campos.name}   placeholder="Nombre"    required >
+    <input class="contact-form"     type="email"   name={campos.email}  placeholder="Email"     required >
+    <input class="contact-form"     type="number"  name={campos.tel}    placeholder="Teléfono"  required >
+    <div>
+    <label for="color">Asunto:</label> 
+    <select class="contact-form w-3/4"  name="opciones" required >
+        <option value={campos.sub.option}>              {campos.sub.option}</option>
+        <option value={campos.sub.a} > {campos.sub.a} </option>
+        <option value={campos.sub.b}>        {campos.sub.b}</option>
+        <option value={campos.sub.c}>     {campos.sub.c}</option>
+        <option value= {campos.sub.d}>   {campos.sub.d}</option>
+        <option value={campos.sub.e} >     {campos.sub.e}               </option>
+    </select>
+    </div>
+    <textarea class="contact-form txt-area" rows="6"  name="mensaje" placeholder="Mensaje"></textarea> 
+    <!-- <div class="g-recaptcha mb-4" data-sitekey="6LevNrcUAAAAAMQvoULLvMvrLbk5XDbFK8BItvZJ" data-callback="correctCaptcha"></div> -->
+    <input class="btn-enviar bg-main-300 hover:bg-main-400 text-white py-2  " type="submit" name="send" placeholder="E N V I A R">    
+
+</form>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+---
+import CarouselSlider from "@components/svelte/CarouselSlider.svelte";
+import Colors from "@components/Colors.astro";
+import ServiciosBlocks from "@components/ServiciosBlocks.astro";
+import LayoutHome from "@layouts/LayoutHome.astro";
+import Clientes from "@components/Clientes.astro";
+import {imgK02 } from "../lib/images"
+import Gallery from "@components/Gallery.astro";
+
+const title = "Malla Ciclónica";
+const desc ="Malla ciclónica, alambres de púas y accesorios, servicio todo México.";
+const hx1 = "Fabricación de malla ciclónica, mantenimiento e instalación."
+const seo = {
+  title: title,
+  description: desc,
+};
+
+
+---
+
+<LayoutHome {seo} titlepage={hx1} imgPage={imgK02} subtitle="Somos fabricantes, Contamos con servicio en todo México." >
+  <section class=" md:-mt-10 lg:-mt-60 p-0">
+    <div class="container relative z-3">
+      <ServiciosBlocks />
+  
+    </div>
+  </section>
+  <div class="container py-16 text-center ">
+ 
+    <p class="text-5">
+      Damos el servicio a toda la república ya que tenemos la experiencia de más
+      de 16 años en el mercado. Todo nuestro personal para la instalación de
+      nuestros productos es altamente calificado es por eso que contamos con la
+      confianza de clientes.
+    </p>
+  </div>
+
+  <section class="bg-brand text-brand-50">
+    <div class="container grid grid-cols-2">
+      <div> 
+        <h3 class="text-6 ">MISION</h3>
+        <p> Brindar servicio y calidad, para la seguridad de su familia y su patrimonio</p>
+       </div>
+      <div>
+        <h3>VISION</h3>
+        <p>
+          Conservarnos como empresa lider en nuestro ramo y el compromiso de no
+          defraudar a nuestros clientes. 
+        </p>
+      </div>
+    </div>
+  </section>
+<section class="text-center p-0">
+  <h3 class="my-16">Nuestros Clientes</h3>
+  <div class="container">
+   
+    <CarouselSlider client:load />
+    <Gallery/>
+  </div>
+
+</section>
+
+
+  <!-- <Colors /> -->
+</LayoutHome>
+
+<style>
+  h3 {
+    @apply text-4.6 lg:text-6;
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Malla Ciclónica PVC";
+const desc = " Malla forrada en plástico P.V.C. es un alambre de calibre 11.5 recubierto de plástico para climas extremosos.  ";
+const imgtop = "https://grupocepromex.com/imag_cepromex/mallapvc.jpg"
+const txb = "Somos distribuidores"
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutProd {seo} titlepage={title} subtitle={desc}>
+  <section>
+    <div class="container">
+      <p class="mb-4">Malla forrada en plástico P.V.C. es un alambre de calibre 11.5 recubierto de plástico para climas extremosos. Con tratamiento para la vida util,y para los rayos ultra violeta contiene un pegamento especial para las cuarteadoras.</p>
+      <p class="mb-4">El alambre utilizado en la fabricación de la malla ciclónica es de acero de alta resitencia pulido y galvanizado para evitar la erosión y brindarle mayor durabilidad. Su presentación es de rollos compactos de 20 m. de largo. Fabricamos malla ciclónica galvanizada en aberturas, alturas y calibres especiales garantizando la calidad de nuestros productos.</p>
+      <p>Así mismo le brindamos el servicio de instalación y mantenimiento para toda clase de cercas. como son en hoteles, aeropuertos, residencias, escuelas, industrias, canchas deportivas, etc.</p>
+    </div>
+  </section>
+  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+</LayoutProd>
+
+

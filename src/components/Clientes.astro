@@ -1,0 +1,15 @@
+---
+import { productos } from "@lib/menus.json"
+
+const menu = productos
+
+const { classClients, ...props } = Astro.props;
+
+---
+<div class=" overflow-x-auto "></div>
+<ul class:list={["flex gap-4 w-full ",classClients]} {...props} >
+    {menu.map( ({title, link })=> (
+        <li class="h-20 w-60"><a href={link}>{title}</a></li> 
+     ))}
+</ul>
+

@@ -1,0 +1,64 @@
+---
+import MainMenu from '@components/theme/Menu.astro';
+import Mobile from './Mobile.astro';
+import Contact from '@components/Contact.astro';
+import Cepromex from '@components/Cepromex.astro';
+
+
+---
+<header id="navbar">
+	<div class="container ">
+		<a href="/" class="logo" ><Cepromex class="logo-svg" /><span>Grupo Cepromex</span></a>
+
+		<nav class="flex icb gap-4 ">
+			<!-- <div class="fondo-bar"></div>  -->
+			<MainMenu class="navigation" />
+		</nav>
+		<Contact class="hidden lg:flex text-white" 
+			classBtn="border-2 border-white  rounded-full hover:bg-brand-500 " 
+			classIco=' hover:bg-brand-500 '  />
+
+		<Mobile />
+	</div>	
+</header>
+
+<style>
+	#navbar {
+		@apply fixed z-10 flex items-center w-full top-0 left-0 transition-all h-30 bg-brand/20 ;
+	}
+	#navbar .container { 
+		@apply flex items-center justify-between transition-all ;
+	}
+	#navbar.sticky {
+		@apply top-0 bg-brand-400 h-16 ;
+	}
+	#navbar.sticky.base{ 
+		@apply top-0 bg-brand-700 ;
+	 }
+	#navbar.sticky.ocultar{
+		@apply transition-all bg-brand-500 top-16 ;
+	}
+	#navbar.sticky .container {
+		@apply transition-all top-16 ;
+	}
+	#navbar .logo {
+		@apply all300 text-white text-5 flex ic gap-2 ;
+	}
+	#navbar.sticky .logo{
+		@apply text-4 ;
+	}
+	#navbar .navigation{
+       @apply hidden lg:flex text-white gap-4 ;
+    }
+	#navbar .contact{
+		@apply text-soft-40 ;
+	}
+	#navbar .navicons a:hover{
+		@apply text-soft-40/60 ;
+	}
+	.logo-svg{
+		@apply text-white w-12 border-2 border-white rounded-full p-1 all300  ; 
+	}
+	.sticky .logo-svg {@apply w-10 bg-brand-600 ;}
+</style>
+

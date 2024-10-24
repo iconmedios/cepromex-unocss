@@ -1,0 +1,10 @@
+---
+const { textbt, imgurl, altitle, class: className, ...props } = Astro.props;
+---
+
+<section class:list={[className]}  >
+    <div class="container text-center">
+      <img class="mx-auto"  src={imgurl}  alt={altitle}  />
+      <span class="py-4">{textbt}</span> 
+    </div>
+</section>

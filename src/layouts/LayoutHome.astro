@@ -1,0 +1,41 @@
+---
+import Layout from "./Layout.astro";
+import type { Props as SEOProps } from "@components/base/SeoHead.astro";
+import CoverBG from "@components/CoverBG.astro";
+import PhoneDuo from "@components/icons/PhoneDuo.astro";
+import { contact, whatsapp, site } from "@lib/site.json"
+import { Image } from "astro:assets";
+export interface Props {
+	seo?: SEOProps;
+	titlepage: string;
+	subtitle?: string;
+	imgPage?: string;
+	
+}
+const { seo, titlepage, subtitle, imgPage } = Astro.props as Props;
+
+---
+<Layout {seo} >
+	<section id="page-head" class="bg-brand-500 text-soft-40 relative" >
+		<CoverBG bgimg={imgPage} classCover=" bg-gradient-to-l from-white/10 via-60%  to-brand-500 " classImage="opacity-50"   />
+		<div class="container h-140 flex ic relative z-3 ">
+            <div class="lg:w-70% grid gap-4 ">
+                <h1 class="text-6 md:text-10 lg:text-12 xl:text-16 ">{titlepage}</h1>
+                {subtitle && <p class="px-2">{subtitle}</p>}
+
+				<ul class=" grid md:flex gap-2 py-4">
+
+				{ contact.map( ({name, url })=> (  
+				<li><a class="inline-flex ic gap-2 hover:gap-3 border-zinc-500 text-zinc-50 " href={url}> 
+				<PhoneDuo class="text-6 text-brand-50 rounded-full bg-brand-200 p-1 " />  {name}</a></li>))}
+
+			</ul>
+            </div>
+				
+		</div>
+	</section>
+	<section>
+		<slot/>
+	</secπtion>
+</Layout>
+

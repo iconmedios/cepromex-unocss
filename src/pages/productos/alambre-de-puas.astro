@@ -1,0 +1,37 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Alambre de Puas";
+const desc ="Alambre de púas galvanizado calibre 14.5 y 15.5: Fabricado bajo los más altos estándares de calidad,";
+const imgtop = "https://grupocepromex.com/imag_cepromex/alambre-puas-cepromex.jpg "
+const txb = "Somos distribuidores"
+
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+<section>
+  <div class="container">
+   
+      <p class="mb-4"> 
+        Nuestro alambre de púas de alta tensión es la respuesta. Con una resistencia excepcional a la ruptura de 435 kg, 
+        este producto supera las expectativas en términos de seguridad. 
+        Su fabricación con dos alambres galvanizados trenzados en calibres 14.5 y 15.5, y una separación entre púas de 5" 
+        según la norma ASTM A 121, garantiza una protección confiable a un costo altamente competitivo. Optimice su inversión en seguridad sin sacrificar calidad.
+      </p>
+      <p>
+        Alambre de púas galvanizado calibre 14.5 y 15.5: Fabricado bajo los más altos estándares de calidad, nuestro alambre de púas ofrece una resistencia a la ruptura de 435 kg. 
+        Ideal para perímetros de alta seguridad. #alambredepúas #galvanizado #altaseguridad #ASTM
+      </p>
+
+    <!-- <img src="https://grupocepromex.com/imag_cepromex/alambre-puas-cepromex.jpg"/>
+    <img src="https://grupocepromex.com/imag_cepromex/puas_grapas.jpg" /> -->
+  </div>
+</section>
+
+<ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+</LayoutProd>

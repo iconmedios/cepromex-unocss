@@ -1,0 +1,96 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import LayoutPage from "@layouts/LayoutPage.astro";
+
+const title = "Servicios Cepromex";
+const desc = "Contamos con el mantenimiento y servicio profesional de malla ciclónica.";
+const imgtop = "https://grupocepromex.com/imag_cepromex/servicios.jpg" 
+import {imgW22 } from "@lib/images"
+const txb = "Somos distribuidores"
+
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutPage {seo} titlepage={title} subtitle={desc} imgPage={imgW22.url}  >
+
+  <section>
+    <div class="container">
+      <p>
+        Reconocemos lo importante que es para usted el contar con SEGURIDAD Y
+        SERVICIO CONTAMOS CON SOLUCIONES AVANZADAS.
+      </p>
+      <p>
+        CEPROMEX, pone a su disposición una gama de productos que resultan ideales
+        para apoyarles en este sentido.
+      </p>
+      <p>
+        Contamos con la logística adecuada para el manejo y trasporte de su
+        material lo que reduce potencialmente sus constos de mantenimiento y
+        durabilidad
+      </p>
+
+      <h5 class="py-4" >Auxiliares en la ingeniería civil.</h5>
+
+      <p>Nuestros productos cumplen con las normas y procesos intermacionales</p>
+      <ul class="list-base my-4 ">
+        <li>Homologación con las Normas Internacionales de Calidad.</li>
+        <li>Materia prima y procesos de fabricación de clase mundial.</li>
+        <li>Fácil instalación…Adaptables a cualquier estructura.</li>
+        <li>Larga durabilidad y resistencia…más de 8 años de vida.</li>
+        <li>No dañan el medio ambiente…se integran al ecosistema.</li>
+      </ul>
+
+    </div>
+  </section>
+
+
+  <section class="bg-brand-300 text-white">
+    <div class="container grid lg:grid-cols-2 gap-8">
+
+      <div>
+        <h4 class="mb-4">ESTILO INDUSTRIAL</h4>
+        <a class="text-brand mb-8" href="https://grupocepromex.com/diagrama_inst.html">COLOCACIÓN DE MALLA CON SUS ACCESORIOS</a>
+        
+        <ul class="list-base my-4 ">
+          <li>MALLA CICLONICA</li>
+          <li>POSTE DE ARRANQUE</li>
+          <li>POSTE DE ESQUINERO</li>
+          <li>ALAMBRE DE PUAS</li>
+          <li>POSTE DE LINEA</li>
+          <li>TAPON SENCILLO</li>
+          <li>ABRAZADERA DE TORNILLO</li>
+          <li>ABRAZADERA DE SOLERA</li>
+          <li>SOLERAS GALVANIZADAS</li>
+          <li>TENSOR</li>
+          <li>TAPONES PARA PUAS</li>
+          <li>ESPADIN</li>
+          <li>TORNILLOS GALVANIZADOS</li>
+        </ul>
+      </div>
+
+      <div>
+
+        <h4 class="mb-4">COLOCACIÓN DE ACCESORIOS <br> PARA PUERTAS ABATIBLES</h4>
+    <img src="https://grupocepromex.com/imag_cepromex/puerta_malla.jpg" alt="" width="333" height="250" />
+    <ul class="list-base my-4 ">
+      <li>PUERTAS Y PORTONES.</li>
+      <li>TIPO RESIDENCIAL.</li>
+      <li>TIPO INDUSTRIAL.</li>
+      <li>PUERTAS Y PORTONES CON ABERTURA HASTA DE 180” </li>
+      <li>FABRICACION SOBRE PEDIDO</li>
+      <li>BISAGRA INDUSTRIAL.</li>
+      <li>BISAGRA TIPO HEMBRA Y MACHO.</li>
+      <li>PASADOR.</li>
+      <li>PASADOR TIPO MAUSER.</li>
+    </ul>
+    <p>TODOS LOS COMPONENTES SON GALVANIZADOS.</p>
+
+      </div>
+    </div>
+  </section>
+  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+
+</LayoutPage>

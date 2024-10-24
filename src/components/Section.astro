@@ -1,0 +1,15 @@
+---
+
+interface Props {
+  ids?: string;
+  class?: string;
+}
+
+const { ids, class: classSection="bg-gray-10", ...props } = Astro.props;
+
+---
+
+<section id={ids} class:list={[classSection]} {...props}>
+  <slot />
+</section>
+

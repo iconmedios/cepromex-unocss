@@ -1,0 +1,77 @@
+---
+import MainMenu from '@components/theme/Menu.astro';
+import { productos, main } from "@lib/menus.json"
+import Logo from './Logo.astro';
+
+---
+<button id="button-open" >☰ </button>
+<section id="nav-mobile" class="navleft ">    
+    <div class="p-6 grid justify-between">
+        <Logo class="mobile-logo mb-12 text-6" />
+        <MainMenu class="mobile-menu" /> 
+        
+        <ul class="py-8">
+          { productos.map( ({title, link })=> (  
+              <li><a class="uppercase" href={link}>{title}</a></li>
+          ))}
+      </ul>  
+    
+  
+        <a class="block pt-6 right-4" href="/"> AVISO DE PRIVACIDAD</a>
+    </div>
+ 
+</section>
+
+<style>
+ 
+
+      
+    #nav-mobile {@apply fixed h-screen all400 bg-brand text-white/80 z-100 grid ic overflow-hidden lg:hidden;  ;}
+ 
+    /* RIGHT LEFT  */
+    #nav-mobile.navrl           { @apply: top-0 -right-80% w-80% md:-right-60% md:w-50vw  ; }
+    #nav-mobile.navrl.visible   { @apply top-0 right-0 ; }
+    /* TOP BOTTOM */
+    #nav-mobile.navtopb           { @apply left-0 -top-full w-full  ; }
+    #nav-mobile.navtopb.visible   { @apply left-0 top-0  ; }
+    /* LEFT RIGHT   */
+    #nav-mobile.navleft         { @apply: top-0 -left-80% w-80% md:-left-60% md:w-50vw  ; }
+    #nav-mobile.navleft.visible { @apply top-0 left-0 ; }
+
+
+
+    #button-open {@apply lg:hidden bg-brand-500 h-16 px-2 text-soft-10 text-6 pb-1 ;}
+
+    .mobile-menu a{ @apply text-soft-10 hover:opacity-8 ;} 
+    .mobile-logo img { @apply w-20  ; }
+
+
+
+ 
+ </style>
+
+
+<script>
+    const btnOpen: HTMLElement | null = document.querySelector("#button-open");
+    const navMobile: HTMLElement | null = document.querySelector("#nav-mobile");
+
+    function openMenuMob() {
+      if (navMobile) {
+        navMobile.classList.toggle("visible");
+      }
+    }
+
+    function closeMenuMob() {
+      if (navMobile) {
+        navMobile.classList.remove("visible");
+      }
+    }
+
+    if (btnOpen) {
+      btnOpen.addEventListener("click", openMenuMob);
+    }
+
+    if (navMobile) {
+      navMobile.addEventListener("click", () => { closeMenuMob();});
+    }
+</script>

@@ -1,0 +1,72 @@
+{
+    "site": [
+        {
+            "sitename":"Grupo Cepromex",
+            "slogan": "Cercas y Protecciones de México",
+            "description": "Somos fabricantes de malla ciclónica, alambres de púas, instalación de rejacero y accesorios galvanizados. Servicio en toda la república",
+            "address": "Nicolas Romero",
+            "city": "Estado de México",
+            "domain": "https://grupocepromex.com/",
+            "twitter_site": "@iconmedios",
+            "image_site": "/images/social.jpg",
+            "email":"grupocepromex@prodigy.net.mx"
+        }
+    ],
+    "contact": [
+        {
+            "name": "55 5823 0487",
+            "url": "tel:5558230487",
+            "icon": "phone-in-talk-outline"
+        },
+        {
+            "name": "55 5821 6160",
+            "url": "tel:5558216160",
+            "icon": "phone-in-talk-outline"
+        },
+        {
+            "name": "55 5821 2285",
+            "url": "tel:5558212285",
+            "icon": "phone-in-talk-outline"
+        },
+        {
+            "name": "55 5821 8671",
+            "url": "tel:5558218671",
+            "icon": "phone-in-talk-outline"
+        }
+    ],
+    "whatsapp":[
+        {
+            "name": "MALLA CICLONICA",
+            "url": "https://api.whatsapp.com/send?phone=5215546019977",
+            "icon": "baseline-whatsapp"
+        },
+        {
+            "name": "SERVICIOS",
+            "url": "https://wa.me/5215549888300",
+            "icon": "baseline-whatsapp"
+        }
+    ],
+    "social": [
+        {
+            "red": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100077550091454",
+            "icon": "circle_facebook"
+        },
+        {
+            "red": "Youtube",
+            "url": "https://www.youtube.com/",
+            "icon": "circle_youtube"
+        },
+        {
+            "red": "Linkedin",
+            "url": "https://www.linkedin.com/company/people-in-motion-soluciones-integrales-en-procesos-humanos/about/",
+            "icon": "circle_linkedin"
+        }
+    ]
+}
+
+
+
+
+
+

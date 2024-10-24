@@ -1,0 +1,70 @@
+---
+import { productos, main } from "@lib/menus.json"
+import { contact, whatsapp, site } from "@lib/site.json"
+import Link from '../base/LinkFooter.astro';
+
+
+import ContactIcons from "@components/ContactIcons.astro";
+import WhatsappChat from "@components/WhatsappChat.astro";
+import IcOutlineEmail from "@components/icons/IcOutlineEmail.astro";
+import PhoneDuo from "@components/icons/PhoneDuo.astro";
+
+const menuprod = productos
+---
+<div class="bg-brand-500 text-center py-6 text-soft-20">
+    <h6 class=" uppercase px-8  "> Contamos con mantenimiento, instalación y servicio profesional de Malla Ciclónica.</h6>
+</div>
+<footer id="contacto" class=" bg-brand text-white/80 ">
+
+    <!-- <VideoFull /> -->
+
+
+    <div class="container">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <div class="panel-footer">
+                <h5 class="pb-8">Acerca de</h5>
+                <ul>
+                    { main.map( ({title, link })=> (
+                        <li><Link href={link}>{title}</Link></li>
+                    ))}
+                </ul>
+                <ContactIcons class="flex mt-8 gap-2 text-6" aria-label="contacto" />
+                <p class="mt-9">Nicolas Romero, Estado de Mexico.</p>
+              
+            </div>
+            <div class="panel-footer ">
+                <h5 class="pb-8">Productos & Servicios</h5>
+                <ul>
+                    { menuprod.map( ({title, link })=> (  
+                        <li><Link href={link}>{title}</Link></li>
+                    ))}
+                </ul>
+            </div>
+            <div class="panel-footer panel-soft">
+                <h5 class="pb-8 flex ic gap-1"> <IcOutlineEmail class="text-6" /> Contacto</h5>
+                <ul class="pb-8 grid gap-1">
+                    { contact.map( ({name, url })=> (  
+                        <li><a class="inline-flex ic gap-2 hover:gap-3 border-zinc-500 text-zinc-7 " href={url}> 
+                        <PhoneDuo class="text-5 text-brand " />  {name}</a></li>
+                    ))}
+                </ul>
+
+                <a href=""> {site[0].email} </a>
+          
+            </div>
+           
+        </div>
+
+        <!-- <img class="w-full absolute z-3 bottom-0 -mb-2" src={divisortr} alt="separador"> -->
+    </div>
+
+    <div class="bg-brand-500 grid items-center py-8 relative visible:text-white">
+        <p class="text-center px-4">
+            <span class="text-brand-100">GRUPO CEPROMEX </span> ® TODOS LOS DERECHOS RESERVADOS
+        </p>
+    </div>
+    <!-- <div class="puntos"></div> -->
+     <WhatsappChat />
+</footer>
+

@@ -1,0 +1,13 @@
+---
+import Cepromex from "@components/Cepromex.astro";
+import { site } from "@lib/site.json"
+const data= site[0]
+const { class: className, ...props } = Astro.props;
+---
+<a href={data.domain} class:list={[, className]} {...props}>
+
+  <Cepromex class="text-white w-14 border-2 border-white rounded-full p-1 " />
+
+    {data.sitename}
+</a>
+

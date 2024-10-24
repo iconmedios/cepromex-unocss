@@ -1,0 +1,73 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import ServicesTable from "@components/tables/ServicesTable.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Malla Ciclónica Galvanizada";
+const desc =" Nuestros productos de malla galvanizada por inmersión en caliente, resisten a todos climas húmedos y calurosos ";
+const imgtop = "https://grupocepromex.com/imag_cepromex/mallagalv-cepromex.jpg"
+const txb = "Somos distribuidores"
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+
+<section class="bg-zinc-50">
+  <div class="container">
+    <p class="mb-4">
+      Nuestros productos de malla galvanizada, por inmersión en caliente, resisten a
+      todos climas húmedos y calurosos por lo cual lo garantizamos plenamente,
+      tenemos todo tipo de cercados como: Campos deportivos, clubs, estacionamientos, industrias, escuelas, aeropuertos,
+      fraccionamientos residenciales, hoteles, etc. Contamos con la instalación de toda clase de cercas, nos adaptamos a todas las
+      especificaciones de sus obras o proyectos.
+    </p>
+    <p>Contamos con diferentes aberturas y calibres.</p>
+
+
+  </div>
+</section>
+
+<section  class="bg-zinc-1" >
+  <div class="container">
+  <ServicesTable/>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+   <div class="grid md:grid-cols-2 gap-16">
+    <did>
+      <h4>ESPECIFICACIONES:</h4>
+      <ul class="list-base pt-4">
+        <li>LONGITUD DEL ROLLO 20 MTS.</li>
+        <li>ABERTURAS (mm) 55 x 55, 60 x 60, 63 x 63, 69 x 69.</li>
+        <li>SE UTILIZAN ALAMBRES GALVANIZADO POR INMERSION EN CALIENTE.</li>
+        <li>P.V.C. DE ALTA CALIDAD RESISTENCIA A LA ACCION DEL SOL.</li>
+      </ul>
+    
+    </did>
+    <did>
+
+  <h4>MALLA CICLON CON ABERTURA ESPECIAL</h4>
+
+  <p class="py-4">ESPECIFICACIONES:</p>
+  <ul class="list-base">
+    <li>LONGITUD DEL ROLLO: LA REQUERIDA</li>
+    <li>ALTURA DEL ROLLO: LA REQUERIDA, NO MAYOR DE 4 mts.</li>
+    <li>
+      ABERTURAS (mm) 15 x 15, 25 x 25, 30 x 30, 32 x 32, 36 x 36, 44 x 44 y 50 x
+      50
+    </li>
+    <li>SE UTILIZAN ALAMBRES GALVANIZADOS POR INMERSION EN CALIENTE.</li>
+    <li>P.V.C. DE ALTA CALIDAD RESISTENTE A LA ACCION DEL SOL.</li>
+  </ul>
+    </did>
+   </div>
+  </div>
+</section>
+
+<ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+
+</LayoutProd>

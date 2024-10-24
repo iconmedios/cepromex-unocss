@@ -1,0 +1,56 @@
+:root{
+
+  --fso-min:(100vw - 600px) / (1360 - 600); /*operacion tamaño fuente*/
+  --sp-d: clamp(3rem, -1.953rem + 9.302vw, 6rem);
+  
+  --fs-d: clamp(48px, 48px + (92 - 48) * ((var(--fso-min))), 92px);
+  --fs-c: clamp(32px, 32px + (68 - 32) * ((var(--fso-min))), 68px);
+  --fs-b: clamp(28px, 28px + (56 - 28) * ((var(--fso-min))), 56px);
+  --fs-a: clamp(26px, 26px + (46 - 26) * ((var(--fso-min))), 46px);
+  --fs-1: clamp(24px, 24px + (38 - 24) * ((var(--fso-min))), 38px);
+  --fs-2: clamp(23px, 23px + (32 - 23) * ((var(--fso-min))), 32px);
+  --fs-3: clamp(21px, 21px + (28 - 21) * ((var(--fso-min))), 28px);
+  --fs-4: clamp(20px, 20px + (24 - 20) * ((var(--fso-min))), 24px);
+  --fs-5: clamp(19px, 19px + (20 - 19) * ((var(--fso-min))), 20px);
+  --fs-6: clamp(15px, 15px + (16 - 15) * ((var(--fso-min))), 16px);
+  --fs-7: clamp(14px, 14px + (15 - 14) * ((var(--fso-min))), 15px);
+  --fs-8: clamp(12px, 12px + (14 - 12) * ((var(--fso-min))), 14px);
+  --fs-9: clamp(11px, 11px + (12 - 11) * ((var(--fso-min))), 12px);
+  --fs-tx:clamp(16px, 16px + (18 - 16) * ((var(--fso-min))), 18px); 
+
+
+    /*https://www.fluid-type-scale.com/*/
+
+  
+
+
+  --fs-tx:clamp(1.0rem, 1.0rem + 10vw, 1.1rem);
+  --sp-d: clamp(3rem, -1.953rem + 9.302vw, 6rem);
+     
+  /* https://colorkit.co/color-shades-generator/d34789/ genera los tonos y nombres */
+   
+ 
+  /*COLORES DE SISTEMA */
+     
+  --error:  #d6322c;
+  --success:#6f9e23;
+  --warning:#fcbf49;
+  --info:   #227cbd;
+  }
+
+
+  /* SPACING */
+  .hxd {font-size: var(--fs-c); line-height:1.2em;   }
+  .hxc {font-size: var(--fs-c); line-height:1.2em;   }
+  .hxb {font-size: var(--fs-b); line-height:1.2em;   }
+  .hxa {font-size: var(--fs-a); line-height:1.2em;   }
+  .hx1 {font-size: var(--fs-1); line-height:1.2em;   }
+  .hx2 {font-size: var(--fs-2); line-height:1.2em;   }
+  .hx3 {font-size: var(--fs-3); line-height:1.2em;   }
+  .hx4 {font-size: var(--fs-4); line-height:1.2em;   }
+  .hx5 {font-size: var(--fs-5); line-height:1.2em;   }
+  .hx6 {font-size: var(--fs-6); line-height:1.2em;   }
+  .hx7 {font-size: var(--fs-7); line-height:1.2em;   }
+  .hx8 {font-size: var(--fs-8); line-height:1.2em;   }
+  .hx9 {font-size: var(--fs-9); line-height:1.2em;   }
+

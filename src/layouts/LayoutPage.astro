@@ -1,0 +1,27 @@
+---
+import CoverBG from "@components/CoverBG.astro";
+import Layout from "./Layout.astro";
+import {imgK01 } from "../lib/images"
+import type { Props as SEOProps } from "@components/base/SeoHead.astro";
+export interface Props {
+	seo?: SEOProps;
+	titlepage: string;
+	subtitle?: string;
+	imgPage?: string;
+}
+const imgDefault = imgK01 
+const { seo, titlepage, subtitle, imgPage="assets/images/stock/234.webp" } = Astro.props as Props;
+
+---
+<Layout {seo}>
+	<section id="page-head" class="bg-brand-600 text-soft relative" >
+		<CoverBG bgimg={imgPage}  classCover="bg-gradient-to-b from-brand-300/40 via-10%  to-brand-500" classImage="opacity-80"   />
+		<div class="container pt-32 relative z-3">
+			<h1 class="text-6.8 md:text-10 lg:text-12 xl:text-14 ">{titlepage}</h1>
+				{subtitle && <p>{subtitle}</p>}
+				
+		</div>
+	</section>
+	<slot/>
+</Layout>
+

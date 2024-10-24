@@ -1,0 +1,108 @@
+---
+import ImageCenter from "@components/base/ImageCenter.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Reja de Acero";
+const desc ="Venta y fabricación de Reja de Acero contamos con mantenimiento e instalación en todo México ";
+const imgtop = "https://grupocepromex.com/imag_cepromex/rejaacero-cepromex.jpg"
+const txb = "Somos distribuidores"
+const seo = {
+  title: title,
+  description: desc,
+};
+const rejasCepromex = [
+  {
+    caracteristica: "Fácil de Instalar",
+    descripcion: "¡Sólo Grapas y Tornillos! Instalación rápida, eficiente y con bajo costo de mano de obra."
+  },
+  {
+    caracteristica: "Cero Mantenimiento",
+    descripcion: "Permanece tersa y brillante, sin tener que repintar o aplicar antioxidantes."
+  },
+  {
+    caracteristica: "Terrenos Irregulares",
+    descripcion: "Excelente solución en terrenos irregulares, gracias a lo versátil y fácil de su sistema de fijación."
+  },
+  {
+    caracteristica: "Doble protección contra la Intemperie",
+    descripcion: "Primero una capa de zinc…después, un recubrimiento de Poliéster Termoendurecido."
+  },
+  {
+    caracteristica: "Resistencia",
+    descripcion: "Varillas gruesas cada 5 cm y con 4 pliegues a lo largo."
+  },
+  {
+    caracteristica: "Guía de Instalación",
+    descripcion: "Marcado y excavación de zanja. Colocación de madera para vaciado. Colocación de castillo y alineación. Presentación de Paneles y Postes. Sujeción con Grapas y Tornillos. Chequeo de altura y nivelación de postes. Apuntalado. Vaciado y fraguado."
+  },
+  {
+    caracteristica: "Colores",
+    descripcion: "Otros colores sobre pedido"
+  }
+];
+---
+
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+<section>
+  <div class="container">
+   <p class="mb-4">
+    Fabricadas con acero galvanizado de alta calidad y recubiertas con pintura electrostática, 
+    nuestras rejas ofrecen una resistencia excepcional a la corrosión y a los impactos. 
+    Su diseño versátil se adapta a cualquier espacio, brindándote la seguridad que necesitas sin comprometer el estilo.
+  </p>
+ <p class="mb-4">
+        Todo el material es acero galvanizado acabado con pintura de poliéster
+        termo endurecido, los cuales aportan individualmente el más alto grado
+        de protección contra el medio ambiente y la corrosión, otorgando mayor
+        vida al producto.
+      </p>
+    
+  
+    
+      POSTES de acero, cuadrados con perfil de 60 x 69 mm. Y 1.50 mm. De
+      espesor.
+    </p>
+
+   </p>
+  </div>
+</section>
+
+<section class="bg-brand-300 text-brand-50">
+  <div class="container">
+    <p>LOS CERCOS DE REJA ACERO, ESTAN FORMADOS BÁSICAMENTE POR TRES COMPONENTES:</p>
+    <div class="grid md:grid-cols-3 gap-16 py-8">
+      <div>
+        <h4>PANELES (MEDIDA COMERCIAL)</h4>
+        <ul class="list-base my-4">
+          <li>2.50 LARGO X .63 M. Altura</li>
+          <li>2.50 Largo X 1.50 M. Altura</li>
+          <li>2.50 Largo X 2.00 M. Altura</li>
+          <li>2.50 Largo X 2.50 M. Altura</li>
+        </ul>
+        <p> Rectangulares, de 2.5 x 2.0 m con aberturas de 20 x 5 cm y pliegues de refuerzo en forma de “V”. VERDE Y BLANCO</p>
+      </div>
+      <div>
+        <h4>ACCESORIOS DE FIJACIÓN </h4>
+        <p class="py-4">Grapas metálicas recubiertas con poliéster termoendurecido y tornillos de acero inoxidable.</p>
+        <p>
+          Todo el material es acero galvanizado acabado con pintura de poliéster
+          termo endurecido, los cuales aportan individualmente el más alto grado
+          de protección contra el medio ambiente y la corrosión, otorgando mayor
+          vida al producto.
+        </p>
+      </div>
+      <div>
+        <h4 class="pb-4">POSTES DE ACERO</h4>
+        <p>
+          Cuadrados, con perfil de 60 x 60 mm y 1.5 mm de espesor
+          Línea. Esquinero con tapa de plástico en el extremo superior y
+          orificios roscados para la fijación de paneles mediante grapas y
+          tornillos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+</LayoutProd>

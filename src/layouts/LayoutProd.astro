@@ -1,0 +1,30 @@
+---
+import ServiciosBlocks from "@components/ServiciosBlocks.astro";
+import Layout from "./Layout.astro";
+import type { Props as SEOProps } from "@components/base/SeoHead.astro";
+export interface Props {
+	seo?: SEOProps;
+	titlepage: string;
+	subtitle?: string;
+}
+const { seo, titlepage, subtitle } = Astro.props as Props;
+
+---
+<Layout {seo}>
+	<section id="page-head" class="bg-brand-500 text-soft-40" >
+		<div class="container pt-32">
+			<h1 class="text-6 md:text-10 lg:text-12 xl:text-16 ">{titlepage}</h1>
+				{subtitle && <p>{subtitle}</p>}
+		</div>
+	</section>
+	
+	<slot/>
+
+	<section class="bg-zinc-2" >
+		<div class="container text-center">
+			<h3 class="pb-16 text-brand-400" >Continua navegando por nuestros productos</h3>
+			<ServiciosBlocks />
+		</div>
+	</section>
+</Layout>
+

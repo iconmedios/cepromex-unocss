@@ -1,0 +1,19 @@
+---
+import { productos } from "@lib/menus.json"
+import Link from '../base/LinkFooter.astro';
+
+const menu = productos
+
+const { class: className, ...props } = Astro.props;
+
+---
+<ul class:list={[className]} {...props} >
+    {
+        menu.map( ({title, link })=> (
+            
+        <li><Link href={link}>{title}</Link></li>
+        
+        ))
+    }
+</ul>
+

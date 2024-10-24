@@ -1,0 +1,34 @@
+---
+import CalibresTubos from "@components/tables/CalibresTubos.astro";
+import LayoutProd from "@layouts/LayoutProd.astro";
+
+const title = "Tubo Industrial Galvanizado";
+const desc =" Producto galvanizado en Zinc por inmersión en caliente, con una capa de 276 g/m2 como protección tipo anticorrosivo";
+const seo = {
+  title: title,
+  description: desc,
+};
+---
+
+<LayoutProd {seo} titlepage={title} subtitle={desc} >
+  <section>
+    <div class="container">
+      <p>{desc} dicromatada y recubierto en galvanizado anticorrosivo y soldadura metalzada.</p>
+    </div>
+  </section>
+  <section class="bg-zinc-1">
+  <div class="container ">
+   
+
+    <div class="grid gap-16 lg:grid-cols-2 ">
+      <div class="grid gap-4">
+        <img class="min-w-full" src="https://grupocepromex.com/imag_cepromex/tubogal.jpg" alt={title} width="200" >
+      </div>
+
+     
+        <CalibresTubos class="bg-brand-100 text-12" id="mitabla" />
+  
+    </div>
+  </div>
+</section>
+</LayoutProd>

@@ -1,0 +1,36 @@
+---
+import Header   from "@components/theme/Header.astro";
+import Footer   from "@components/theme/Footer.astro";
+import Head     from "@components/theme/Head.astro";
+import SeoHead  from "@components/base/SeoHead.astro";
+import type { Props as SEOProps } from "@components/base/SeoHead.astro";
+
+export interface Props {
+	seo?: SEOProps;
+    class?: string
+}
+const { seo, class: className, ...props  } = Astro.props;
+// import '@lib/css/reset.css'
+import '@lib/css/vars.css';
+import '@lib/css/global.css'
+---
+
+<!doctype html>
+<html class="no-js" lang="es" dark-gray >
+    <head>
+        <Head />
+        <SeoHead {...seo} />
+    </head>
+    <body class:list={["visible",className]} {...props}>
+        <Header />
+        <slot/>
+        <Footer />
+        
+        <!-- <script type="text/javascript" is:inline src="/assets/js/main.js"></script> -->
+        <script src="@lib/js/app.js"></script>
+        <script src="assets/js/fslightbox.js" is:inline ></script>
+    </body>
+</html>
+
+
+

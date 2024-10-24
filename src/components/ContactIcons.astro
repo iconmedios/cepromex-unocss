@@ -1,0 +1,15 @@
+---
+import IcOutlineEmail from "./icons/IcOutlineEmail.astro";
+import IcOutlineWhatsapp from "./icons/IcOutlineWhatsapp.astro";
+import { contact, whatsapp, site } from "@lib/site.json"
+
+const { url , class: className, ...props } = Astro.props;
+
+const email = site[0].email 
+const mailto = "mailto:"+email
+---
+
+<ul class:list={[className]}>
+  <li><a href={whatsapp[0].url } ><IcOutlineWhatsapp /></a></li>
+  <li><a href={mailto} > <IcOutlineEmail /></a></li>
+</ul>
