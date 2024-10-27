@@ -1,10 +1,10 @@
 ---
 import ImageCenter from "@components/base/ImageCenter.astro";
 import LayoutProd from "@layouts/LayoutProd.astro";
+import {imgOr24} from "@lib/images"
 
 const title = "Reja de Acero";
 const desc ="Venta y fabricación de Reja de Acero contamos con mantenimiento e instalación en todo México ";
-const imgtop = "https://grupocepromex.com/imag_cepromex/rejaacero-cepromex.jpg"
 const txb = "Somos distribuidores"
 const seo = {
   title: title,
@@ -104,5 +104,5 @@ const rejasCepromex = [
   </div>
 </section>
 
-  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+  <ImageCenter  class="bg-zinc-1" imgurl={imgOr24} altitle={title} textbt={txb}  />
 </LayoutProd>

@@ -1,7 +1,7 @@
 ---
 import CoverBG from "@components/CoverBG.astro";
 import Layout from "./Layout.astro";
-import {imgK01 } from "../lib/images"
+import {imgK01 } from "@lib/images"
 import type { Props as SEOProps } from "@components/base/SeoHead.astro";
 export interface Props {
 	seo?: SEOProps;
@@ -10,7 +10,7 @@ export interface Props {
 	imgPage?: string;
 }
 const imgDefault = imgK01 
-const { seo, titlepage, subtitle, imgPage="assets/images/stock/234.webp" } = Astro.props as Props;
+const { seo, titlepage, subtitle, imgPage="/assets/images/stock/234.webp" } = Astro.props as Props;
 
 ---
 <Layout {seo}>

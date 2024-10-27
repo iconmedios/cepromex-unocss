@@ -1,8 +1,11 @@
 ---
+import ImageCenter from "@components/base/ImageCenter.astro";
 import LayoutProd from "@layouts/LayoutProd.astro";
-
+import { imgOr04 } from "@lib/images"
 const title = "Cinta Plastificada Decorativa"; 
 const desc ="Cinta Plastificada en colores verde, blanco, gris plata y azul rey, como colores de línea, son resistentes a todo tipo de clima ";
+const txb = "Somos distribuidores"
+const imgtop = imgOr04
 const seo = {
   title: title,
   description: desc,
@@ -32,8 +35,8 @@ const seo = {
    
     <p>Contamos con difrentes tamaños y colores.</p>
   </div>
-</section>
-
+</section> 
+<ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
 </LayoutProd>
 <style>
   p{@apply mb-4; }

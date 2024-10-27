@@ -1,6 +1,7 @@
 ---
 import ServiciosBlocks from "@components/ServiciosBlocks.astro";
 import LayoutPage from "@layouts/LayoutPage.astro";
+import {imgOr16, deacero, imgW16  } from "@lib/images"
 
 const title = "Productos Principales";
 const desc =" Desde la seguridad perimetral con nuestras mallas ciclónicas galvanizadas y alambre de púas, hasta la construcción de estructuras robustas con tubos industriales galvanizados. ";
@@ -10,7 +11,7 @@ const seo = {
 };
 ---
 
-<LayoutPage {seo} titlepage={title} subtitle={desc} >
+<LayoutPage {seo} titlepage={title} subtitle={desc} imgPage="/assets/images/webp/IMG-20240905-WA0049.webp" >
   <section>
     <div class="container">
       <p>
@@ -50,9 +51,9 @@ const seo = {
   <section class="bg-zinc-50" >
     <div class="container text-center">
        
-      <img class="w-30 mx-auto" src="https://grupocepromex.com/imag_cepromex/deacero_logo.jpg" alt="REJACERO" width="104" height="25"/>
+      <img class="w-30 mx-auto" src={deacero } alt="REJACERO" width="104" height="25"/>
       <span class="py-4">Somos distribuidores directos</span> 
-      <img class="mx-auto" src="https://grupocepromex.com/imag_cepromex/prodgeneral.jpg" alt=""/>
+      <img class="mx-auto" src={imgOr16} alt=""/>
    
     </div>
   </section>

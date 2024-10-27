@@ -1,10 +1,10 @@
 ---
 import ImageCenter from "@components/base/ImageCenter.astro";
 import LayoutProd from "@layouts/LayoutProd.astro";
+import {imgOr02 } from "@lib/images"
 
 const title = "Alambre de Puas";
 const desc ="Alambre de púas galvanizado calibre 14.5 y 15.5: Fabricado bajo los más altos estándares de calidad,";
-const imgtop = "https://grupocepromex.com/imag_cepromex/alambre-puas-cepromex.jpg "
 const txb = "Somos distribuidores"
 
 const seo = {
@@ -27,11 +27,8 @@ const seo = {
         Alambre de púas galvanizado calibre 14.5 y 15.5: Fabricado bajo los más altos estándares de calidad, nuestro alambre de púas ofrece una resistencia a la ruptura de 435 kg. 
         Ideal para perímetros de alta seguridad. #alambredepúas #galvanizado #altaseguridad #ASTM
       </p>
-
-    <!-- <img src="https://grupocepromex.com/imag_cepromex/alambre-puas-cepromex.jpg"/>
-    <img src="https://grupocepromex.com/imag_cepromex/puas_grapas.jpg" /> -->
   </div>
 </section>
 
-<ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+<ImageCenter  class="bg-zinc-1" imgurl={imgOr02 } altitle={title} textbt={txb}  />
 </LayoutProd>

@@ -1,10 +1,7 @@
 ---
-import CarouselSlider from "@components/svelte/CarouselSlider.svelte";
-import Colors from "@components/Colors.astro";
 import ServiciosBlocks from "@components/ServiciosBlocks.astro";
 import LayoutHome from "@layouts/LayoutHome.astro";
-import Clientes from "@components/Clientes.astro";
-import {imgK02 } from "../lib/images"
+import {imgK02} from "@lib/images"
 import Gallery from "@components/Gallery.astro";
 
 const title = "Malla Ciclónica";
@@ -50,15 +47,15 @@ const seo = {
       </div>
     </div>
   </section>
-<section class="text-center p-0">
-  <h3 class="my-16">Nuestros Clientes</h3>
-  <div class="container">
+  <section class="text-center">
+    <h3 class="my-16">Proyectos</h3>
+    <div class="container">
    
-    <CarouselSlider client:load />
-    <Gallery/>
-  </div>
+      <Gallery/>
+    </div>
+  
+  </section>
 
-</section>
 
 
   <!-- <Colors /> -->

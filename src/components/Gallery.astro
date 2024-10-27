@@ -7,11 +7,12 @@ const galleryFull = WEBP;
 const { classClients } = Astro.props;
 ---
 
-<div class="overflow-x-auto"></div>
-<ul class:list={["grid grid-cols-8 gap-4 w-full", classClients]}>
+<div class="overflow-auto ">
+<ul class:list={["grid grid-cols-3  md:grid-cols-4 lg:grid-cols-8 gap-4 w-full", classClients]}>
   {galleryMin.map((minItem, index) => (
     <a href={galleryFull[index].url} data-fslightbox="gallery">
       <img src={minItem} alt="productos cepromex" width="300" height="300" loading="lazy" />
     </a>
   ))}
 </ul>
+</div>

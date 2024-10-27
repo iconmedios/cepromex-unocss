@@ -1,8 +1,12 @@
 ---
+import ImageCenter from "@components/base/ImageCenter.astro";
 import LayoutProd from "@layouts/LayoutProd.astro";
+import {imgW03} from "@lib/images"
 
 const title = "Señalización Víal"
 const desc ="Contamos con una amplia gama de señalización vial te permite cumplir con todas las normativas y garantizar un entorno seguro.";
+const imgtop = imgW03.url
+const txb = "Somos distribuidores"
 const seo = {
   title: title,
   description: desc,
@@ -21,5 +25,6 @@ const seo = {
           nuestra señalización te ayudará a comunicar de manera clara y eficaz. ¡Contáctanos y descubre cómo podemos ayudarte a destacar tu proyecto!"</p>
     </div>
   </section>
+  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
 
 </LayoutProd>

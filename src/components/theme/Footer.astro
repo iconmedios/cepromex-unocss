@@ -1,6 +1,6 @@
 ---
 import { productos, main } from "@lib/menus.json"
-import { contact, whatsapp, site } from "@lib/site.json"
+import { contact, site } from "@lib/site.json"
 import Link from '../base/LinkFooter.astro';
 
 
@@ -8,9 +8,21 @@ import ContactIcons from "@components/ContactIcons.astro";
 import WhatsappChat from "@components/WhatsappChat.astro";
 import IcOutlineEmail from "@components/icons/IcOutlineEmail.astro";
 import PhoneDuo from "@components/icons/PhoneDuo.astro";
+import CarouselSlider from "@components/svelte/CarouselSlider.svelte";
 
 const menuprod = productos
 ---
+
+<section class="text-center p-16 bg-brand-100">
+    <h3 class="my-16">Nuestros Clientes</h3>
+    <div class="container">
+     
+      <CarouselSlider client:load />
+  
+    </div>
+  
+  </section>
+  
 <div class="bg-brand-500 text-center py-6 text-soft-20">
     <h6 class=" uppercase px-8  "> Contamos con mantenimiento, instalación y servicio profesional de Malla Ciclónica.</h6>
 </div>

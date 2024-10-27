@@ -2,10 +2,10 @@
 import ImageCenter from "@components/base/ImageCenter.astro";
 import ProNavajas from "@components/tables/ProNavajas.astro";
 import LayoutProd from "@layouts/LayoutProd.astro";
+import {imgOr18 } from "@lib/images"
 
 const title = "Protección de Navajas";
 const desc =" Solución integral para su seguridad perimetral. Nuestra protección de navajas de alambre galvanizado Clase II (67000PSI), ofrece una resistencia inigualable ";
-const imgtop = "https://grupocepromex.com/imag_cepromex/proteccion-navajas.jpg"
 const txb = "Somos distribuidores"
 const seo = {
   title: title,
@@ -39,5 +39,5 @@ const seo = {
   </div>
 </section>
 
-<ImageCenter  class="bg-zinc-50" imgurl={imgtop} altitle={title} textbt={txb}  />
+<ImageCenter  class="bg-zinc-50" imgurl={imgOr18} altitle={title} textbt={txb}  />
 </LayoutProd>

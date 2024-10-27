@@ -5,7 +5,7 @@ import LayoutPage from "@layouts/LayoutPage.astro";
 const title = "Servicios Cepromex";
 const desc = "Contamos con el mantenimiento y servicio profesional de malla ciclónica.";
 const imgtop = "https://grupocepromex.com/imag_cepromex/servicios.jpg" 
-import {imgW22 } from "@lib/images"
+import {imgW22, imgOr26, imgOr22 } from "@lib/images"
 const txb = "Somos distribuidores"
 
 const seo = {
@@ -74,7 +74,7 @@ const seo = {
       <div>
 
         <h4 class="mb-4">COLOCACIÓN DE ACCESORIOS <br> PARA PUERTAS ABATIBLES</h4>
-    <img src="https://grupocepromex.com/imag_cepromex/puerta_malla.jpg" alt="" width="333" height="250" />
+    <img src={imgOr22} alt="" width="333" height="250" />
     <ul class="list-base my-4 ">
       <li>PUERTAS Y PORTONES.</li>
       <li>TIPO RESIDENCIAL.</li>
@@ -91,6 +91,6 @@ const seo = {
       </div>
     </div>
   </section>
-  <ImageCenter  class="bg-zinc-1" imgurl={imgtop} altitle={title} textbt={txb}  />
+  <ImageCenter  class="bg-zinc-1" imgurl={imgOr26} altitle={title} textbt={txb}  />
 
 </LayoutPage>
